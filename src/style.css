@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+  background: #fff;
+  overflow-y: hidden;
+  user-select: none;
+  cursor: none;
+}
+
+#modalbx {
+  position: fixed; inset: 0;
+  z-index: 99999999999;
+  background: #000 url(../images/345435xf.webp) no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+#modalbx .bxweb {
+  background: #fff; color: #111; padding: 20px;
+  border-radius: 20px; display: inline-block;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%); max-width: 90%;
+}
+#modalbx .swtch {
+  float: right; font-size: 1.5rem; font-weight: 700;
+  line-height: 1; color: #000; opacity: .5;
+  background: none; border: 0; cursor: pointer;
+}
+#modalbx .btn-lg {
+  padding: 1rem 4rem; font-size: 15px; font-weight: 600;
+  border-radius: .3rem; margin-top: 1.5rem;
+  border: 1px solid transparent; cursor: pointer;
+}
+#modalbx .bt1 { background: #e5e7eb; border-color: #e5e7eb; margin-right: 1rem; color: #333; }
+#modalbx .bt2 { background: #6001d2; border-color: #6001d2; color: #fff; }
+
+.blink { animation: blink 1s steps(5, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+
+#overlay2 {
+  position: fixed; inset: 0;
+  background: #000; z-index: 9999999999;
+}
+#overlay2 .inner {
+  height: 250px; width: 650px; max-width: 90%;
+  margin: auto; margin-top: calc((100vh / 2) - 125px);
+  border: 2px solid #fff; padding: 50px;
+  animation: scale 2s infinite alternate;
+}
+#overlay2 p { color: #FEFEFE; font-size: large; text-align: center; }
+@keyframes scale { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
+
+#exit-popup {
+  position: fixed; left: 0; top: 0; right: 0;
+  margin: 0 auto; background: #fff; max-width: 460px;
+  padding: 10px; border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5); z-index: 999999999;
+}
+#exit-popup .btn-wrapper { text-align: right; margin-top: 20px; }
+#exit-popup button {
+  padding: 10px 20px; border-radius: 5px;
+  font-size: large; cursor: pointer; border: 1px solid #ddd;
+}
+#exit-popup .btn_leave { background: #1b73e8; color: #fff; border-color: #1b73e8; }
+#exit-popup .btn_cancel { background: transparent; color: #1b73e8; }
+
+#footer {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #114d9a; color: #fff; padding: 10px 0;
+  z-index: 999; text-align: center;
+}
+#footer img { width: 25px; vertical-align: sub; }
+
+#chat {
+  position: fixed; bottom: 74px; right: 13px;
+  background: #fff; padding: 15px; border-radius: 10px;
+  z-index: 99999; text-align: center;
+}
+#chat img { width: 25px; }
+#chat .num { font-size: 22px; font-weight: 600; }
